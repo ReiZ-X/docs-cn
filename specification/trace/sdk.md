@@ -76,7 +76,7 @@ TracerProvider可以提供更新配置的方法。如果配置已更新（例如
 
 OpenTelemetry API有两个负责数据收集的属性：
 
-* `Span`的`IsRecording`属性。如果是`false`，当前的`Span`会丢弃所欲的tracing数据（属性、事件、状态等）。用户可以通过该属性来决定是否收集高成本的trace数据。
+* `Span`的`IsRecording`属性。如果是`false`，当前的`Span`会丢弃所有的tracing数据（属性、事件、状态等）。用户可以通过该属性来决定是否收集高成本的trace数据。
   [Span Processor（Span处理器）](#span-processor)只会接收`IsRecording`是`true`的span。但是，如果`Sampled`
   没有设置的话，[Span Exporter（Span 导出器）](#span-exporter)同样不会接收。
 
